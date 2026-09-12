@@ -13,31 +13,29 @@ proxies:
   udp: true
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   type: vless
-  server: 104.24.30.89
-  port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
-  type: vless
-  server: 192.169.222.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /
     headers:
-      Host: vms.lifetime40.workers.dev
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: 7dc78e93-9c9f-4a38-823b-13df709a1d16
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
