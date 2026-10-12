@@ -5,40 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: 52+ggoCvKFVJyT1NDiuWOZw2rHIvAg3tgqgJl8aeCwY=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 188.114.96.7
+  server: 91.215.43.248
   port: 443
-  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  uuid: a5893c8b-28a2-4947-9a1c-708db25506c3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv
+  servername: my.kempekl.online
   network: ws
   ws-opts:
-    path: /
+    path: /gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae
     headers:
-      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: vless
-  server: 45.130.125.207
-  port: 8443
-  uuid: 31aa0950-eb19-45ff-94a2-af416deb3b90
+      Host: my.kempekl.online
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  type: ss
+  server: ruot.ayucloudservices.nl
+  port: 22037
+  cipher: aes-256-gcm
+  password: c2fe9024-d253-401a-b868-97421f6eb9e0
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: SquarE-saLaD-EbDe.ZDFGVcCfgUUYgGG.wOrKeRS.DEV
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZm5INktPV0lGcHI1NjNSOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: square-salad-ebde.zdfgvccfguuyggg.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -54,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
 rules:
 - MATCH,PROXIES
