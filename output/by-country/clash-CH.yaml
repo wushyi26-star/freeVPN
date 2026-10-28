@@ -12,34 +12,13 @@ proxies:
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
   udp: true
 - name: 🇨🇭 CH 02 - xiaohe
-  type: vless
-  server: 83.147.216.223
-  port: 4433
-  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
+  type: ss
+  server: 132.243.175.144
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
 - name: 🇨🇭 CH 03 - xiaohe
-  type: vless
-  server: 162.159.228.255
-  port: 443
-  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-- name: 🇨🇭 CH 04 - xiaohe
   type: vless
   server: 208.69.78.217
   port: 2053
@@ -51,13 +30,15 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
   client-fingerprint: random
-- name: 🇨🇭 CH 05 - xiaohe
-  type: ss
-  server: 132.243.175.144
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+- name: 🇨🇭 CH 04 - xiaohe
+  type: vless
+  server: 149.33.15.213
+  port: 443
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: swz.proxyplankton.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,7 +48,6 @@ proxy-groups:
   - 🇨🇭 CH 02 - xiaohe
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
-  - 🇨🇭 CH 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -77,6 +57,5 @@ proxy-groups:
   - 🇨🇭 CH 02 - xiaohe
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
-  - 🇨🇭 CH 05 - xiaohe
 rules:
 - MATCH,PROXIES
